@@ -13,7 +13,7 @@ func main() {
 	var wg sync.WaitGroup
 	for _, salutation := range []string{"hello", "greetings", "good day"} {
 		wg.Add(1)
-		go func() {
+		go func() { // 目的通りの動作をさせるならばここに引数を与える
 			defer wg.Done()
 			fmt.Println(salutation)
 		}()
