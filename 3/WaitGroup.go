@@ -13,5 +13,5 @@ func main() {
 	}
 	wg.Add(1)
 	go sayHello()
-	wg.Wait()
+	wg.Wait() //合流ポイント
 }
